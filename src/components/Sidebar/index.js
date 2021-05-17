@@ -3,7 +3,7 @@ import { CloseIcon, Icon, SidebarContainer, SidebarLink, SidebarMenu, SidebarRou
 
 function Sidebar({ isOpen, toggle }) {
   return (
-    <SidebarContainer isOpen={isOpen} onClick={toggle}>
+    <SidebarContainer isOpen={isOpen}>
       <Icon onClick={toggle}>
         <CloseIcon />
       </Icon>
@@ -15,7 +15,7 @@ function Sidebar({ isOpen, toggle }) {
           <SidebarLink to="signup" onClick={toggle}>Sign Up</SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
-          <SidebarRoute to='/signin'>Sign In</SidebarRoute>
+          <SidebarRoute to='/signin' onClick={toggle}>Sign In</SidebarRoute>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
